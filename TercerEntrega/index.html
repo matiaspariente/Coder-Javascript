@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador Carrito</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/variables.js"></script>
+    <script src="js/objetoCarrito.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <img src="img/coolDrink.jpeg" alt="logo">    
+    <article class="container">
+        <table id="carrito"></table>
+        <div class="parent">
+            <div>
+                <label for="cant">
+                    <p>Ingrese cantidad a comprar:</p>
+                </label>
+                <input class="cant" type="number" name="cant" value="1">
+            </div>
+            <div>
+                <label for="select">Bebida a comprar:</label>
+                <select id="select" name="select" class="select">
+                    <option value="1">Cerveza</option>
+                    <option value="2">Aperitivo</option>
+                    <option value="3">Vino</option>
+                    <option value="4">Whisky</option>
+                </select>    
+            </div>
+            <div>
+                <a href="#" role="button" onclick="compraBebida()" class="secondary">AGREGAR PRODUCTO</a>
+            </div>    
+            <div>
+                <label for="select2">Tipo de Pago:</label>
+                <select id="select2" name="select2" class="select2">
+                    <option value="1">Efectivo</option>
+                    <option value="2">MercadoPago</option>
+                    <option value="3">Tarjeta</option>
+                </select>    
+            </div>
+            <p>(*) Pago en Efectivo 20% de descuento</p>
+            <p>(*) Pago con MercadoPago 10% de descuento</p>
+            <p>(*) Pago con Tarjeta 3 cuotas sin interes</p>
+
+            <div>
+                <a href="#" role="button" onclick="finalizarCompra()" class="secondary">FINALIZAR COMPRA</a>
+            </div>
+        </div>
+
+    </article>
+</body>
+</html>
