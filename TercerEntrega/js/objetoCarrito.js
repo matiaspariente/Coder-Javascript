@@ -9,24 +9,9 @@ class Carrito {
     agregarProducto(){
         let resultado = 0
         let item = []; // item de producto agregado
-        switch(this.bebida){ // Verifico que bebida fue ingresado
-            case 1:
-                resultado = this.cantidad * ValorCerveza
-                item.push("Cerveza")
-                break;
-            case 2:
-                resultado = this.cantidad * ValorAperitivo
-                item.push("Aperitivo")
-                break;
-            case 3:
-                resultado = this.cantidad * ValorVino
-                item.push("Vino")
-                break;
-            case 4:
-                resultado = this.cantidad * ValorWhisky
-                item.push("Whisky")
-            break;
-        }
+        const busqueda = bebidas.find(bebidas=>bebidas.id ==this.bebida)
+        resultado = busqueda.precio * this.cantidad
+        item.push(busqueda.producto)
         item.push(this.cantidad)
         item.push(resultado)
         this.carrito.push(item) // agrego item al carrito
@@ -40,15 +25,9 @@ class Carrito {
     }
     cerrarCompra(){
         let mensajepago = ""
-        if(this.pago===1){ // Verifico que tipo de pago y se aplica el descuento
-            this.total = this.total * descuentoEfectivo
-            mensajepago= "Se aplica 20% de descuento por pago en efectivo.\n" 
-        } 
-        else if (this.pago===2){
-            this.total = this.total * descuentoMercadopago
-            mensajepago= "Se aplica 10% de descuento por pago con Mercadopago.\n"  
-        }
-        mensajepago = mensajepago + "El total de la compra es $"+ this.total //genero el mensaje de salida que ira al alert
+        const cierre = descuentos.find(descuentos=>descuentos.id ==this.pago)
+        this.total = this.total * cierre.descuento
+        mensajepago = cierre.mensaje + "El total de la compra es $"+ this.total //genero el mensaje de salida que ira al alert
         this.total=0 // reinicio los valores a 0 para nueva compra
         this.carrito=[]
         document.getElementById("carrito").innerHTML = ""
