@@ -10,12 +10,12 @@
     <script src="./js-bt/bootstrap.min.js"></script>
     <script src="js/variables.js"></script>
     <script src="js/objetoCarrito.js"></script>
-    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Cool Drink - Almacen de Bebidas</title>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-dark">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-darkv">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="img/logo.png" class="navbar-brand logoHeader" alt="logo" width="100" height="100">ALMACEN DE BEBIDAS
@@ -24,10 +24,10 @@
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+              <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="carrito.html">Carrito</a>
@@ -65,56 +65,12 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+
+
+    <div class="cardsProductos row row-cols-1 row-cols-md-2 g-4" id="cardsProductos">
+
+    </div>
     
-      <div class="cardsProductos row row-cols-1 row-cols-md-2 g-4">
-        <div class="col">
-          <div class="card">
-            <img src="img/productos/cervezaTemple.jpg" class="card-img-top" alt="Temple Ipa">
-            <div class="card-body">
-                <h5 class="card-title d-flex justify-content-center">Cerveza Temple IPA</h5>
-                <div class="input-group d-flex justify-content-center">
-                  <h5 class="input-group d-flex justify-content-center">$200</h5>
-                  <a id="btnAgregarCerveza" class="btn btn-primary d-flex justify-content-center">Agregar al Carrito</a>
-                </div>
-            </div>
-            </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="img/productos/vinoBenjamin.jpg" class="card-img-top" alt="Benjamin Malbec">
-            <div class="card-body">
-              <h5 class="card-title d-flex justify-content-center">Vino Benjamin Malbec</h5>
-              <div class="input-group d-flex justify-content-center">
-                <h5 class="input-group d-flex justify-content-center">$900</h5>
-                <a id="btnAgregarVino" class="btn btn-primary d-flex justify-content-center">Agregar al Carrito</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="img/productos/aperitivoBranca.jpg" class="card-img-top" alt="Fernet Branca">
-            <div class="card-body">
-                <h5 class="card-title d-flex justify-content-center">Fernet Branca</h5>
-                <div class="input-group d-flex justify-content-center">
-                  <h5 class="input-group d-flex justify-content-center">$500</h5>
-                  <a id="btnAgregarAperitivo" class="btn btn-primary d-flex justify-content-center">Agregar al Carrito</a>
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="img/productos/whiskyChivas.jpg" class="card-img-top" alt="Whisky Chivas">
-            <div class="card-body">
-                <h5 class="card-title d-flex justify-content-center">Whisky Chivas</h5>
-                <div class="input-group d-flex justify-content-center">
-                  <h5 class="input-group d-flex justify-content-center">$1500</h5>
-                  <a id="btnAgregarWhisky" class="btn btn-primary d-flex justify-content-center">Agregar al Carrito</a>
-                </div>
-            </div>
-        </div>
-      </div>
-      <script src="js/events.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
